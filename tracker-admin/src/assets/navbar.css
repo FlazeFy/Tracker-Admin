@@ -1,0 +1,6 @@
+/*Navbar desktop*/
+.navbar {
+    padding: var(--spaceMD) !important;
+    margin: 0;
+    background: var(--darkColor) !important;
+}
