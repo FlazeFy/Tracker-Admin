@@ -4,7 +4,7 @@
             <p>Oops! Error encountered: {{ error.message }}</p>
         </div>
     
-        <div v-else-if="locations.length > 0">
+        <div v-else-if="locations.length > 0" class="position-relative">
             <GoogleMap
                 api-key="AIzaSyDXu2ivsJ8Hj6Qg1punir1LR2kY9Q_MSq8"
                 style="width: 100%; height: 91vh"
@@ -32,6 +32,15 @@
             </InfoWindow>
             </Marker>
             </GoogleMap>
+            <div class="position-absolute" style="top: var(--spaceMD); left: var(--spaceMD); width: 350px;">
+                <div class="container p-3">
+                    <h4 class="text-center">All Location</h4>
+                    <div v-for="(dt, index) in locations" :key="index" class="d-inline">
+                        <button class="btn btn-primary rounded-pill px-3 py-1 me-1 mb-2" style="font-size: var(--textSM);">{{ dt.location_name }}</button>
+                    </div>
+                </div>
+                <GetTotalLocationByCategory></GetTotalLocationByCategory>
+            </div>
         </div>
     
         <div v-else class="text-center" style="padding-top: 40vh; height: 100vh;">
@@ -40,8 +49,8 @@
         </div>
     </div>
 </template>
-  
 <script setup>
+    import GetTotalLocationByCategory from '@/components/usecases/locations/GetTotalLocationByCategory.vue'
     import { GoogleMap, InfoWindow, Marker } from 'vue3-google-map'
     import axios from 'axios'
     import { ref, onMounted } from 'vue'

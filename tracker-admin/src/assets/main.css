@@ -24,7 +24,7 @@ a,
 .gm-ui-hover-effect span {
   color: white !important;
 }
-.gm-control-active {
+.gm-control-active, .container {
   background: black !important;
   border: 1.75px solid white !important;
   border-radius: 10px !important;
