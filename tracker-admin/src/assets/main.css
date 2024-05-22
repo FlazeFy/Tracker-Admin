@@ -39,4 +39,5 @@ a,
 }
 table tr, table th {
   vertical-align: center !important;
+  text-align: center;
 }

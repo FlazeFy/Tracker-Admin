@@ -1,29 +1,32 @@
 <template>
     <div class="p-3">
-        <table class="table table-bordered text-center text-white">
+        <table class="table table-bordered text-white">
         <thead>
             <tr>
-                <th scope="col">Location Name</th>
-                <th scope="col">Description</th>
+                <th scope="col" rowspan="2" style="width: 300px !important;">Location Name</th>
+                <th scope="col" rowspan="2">Description</th>
+                <th scope="col" rowspan="2">Category</th>
+                <th scope="col" colspan="3">Location</th>
+                <th scope="col" rowspan="2">Action</th>
+            </tr>
+            <tr>
                 <th scope="col">Latitude</th>
                 <th scope="col">Longitude</th>
-                <th scope="col">Category</th>
-                <th scope="col">Address</th>
-                <th scope="col">Action</th>
+                <th scope="col" style="width: 300px !important;">Address</th>
             </tr>
         </thead>
         <tbody>
             <tr v-if="error">
-                <td rowspan="7">
+                <td colspan="7" class="py-4">
                     <p>Oops! Error encountered: {{ error.message }}</p>
                 </td>
             </tr>
             <tr v-else-if="locations.length > 0" v-for="(dt, index) in locations" :key="index" class="position-relative">
                 <th scope="row" class="text-start">{{ dt.location_name }}</th>
                 <td class="text-start">{{ dt.location_desc }}</td>
+                <td>{{ dt.location_category }}</td>
                 <td>{{ dt.location_lat }}</td>
                 <td>{{ dt.location_long }}</td>
-                <td>{{ dt.location_category }}</td>
                 <td class="text-start">{{ dt.location_address }}</td>
                 <td><button class="btn btn-warning rounded-pill py-1 px-2">Manage</button></td>
             </tr>

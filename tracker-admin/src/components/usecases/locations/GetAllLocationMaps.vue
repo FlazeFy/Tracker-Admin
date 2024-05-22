@@ -41,6 +41,7 @@
                     </div>
                 </div>
                 <GetTotalLocationByCategory></GetTotalLocationByCategory>
+                <GetTotalLocationByApps></GetTotalLocationByApps>
             </div>
         </div>
     
@@ -52,6 +53,8 @@
 </template>
 <script setup>
     import GetTotalLocationByCategory from '@/components/usecases/locations/GetTotalLocationByCategory.vue'
+    import GetTotalLocationByApps from '@/components/usecases/locations/GetTotalLocationByApps.vue'
+
     import { GoogleMap, InfoWindow, Marker } from 'vue3-google-map'
     import axios from 'axios'
     import { ref, onMounted } from 'vue'
