@@ -1,9 +1,10 @@
 <script setup>
-import Navbar from '@/components/bars/Navbar.vue'
+  import Navbar from '@/components/bars/Navbar.vue'
+  import GetAllLocationMaps from '@/components/usecases/locations/GetAllLocationMaps.vue'
 </script>
-
 <template>
-  <div class="map">
+  <main class="map">
+    <GetAllLocationMaps></GetAllLocationMaps>
     <Navbar active="map" subactive="null"/>
-  </div>
+  </main>
 </template>

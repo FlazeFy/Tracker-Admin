@@ -13,6 +13,6 @@ import { RouterLink, RouterView } from 'vue-router'
 <style>
   .content-grid {
     width: 100vw;
-    background: var(--whiteColor) !important;
+    background: var(--darkColor) !important;
   }
 </style>
