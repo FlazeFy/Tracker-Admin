@@ -10,6 +10,7 @@
                 style="width: 100%; height: 91vh"
                 :center="center"
                 :zoom="15"
+                @click="alert('asd')"
             >
             <Marker
                 v-for="(location, index) in locations"

@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Map</a>
+                    <a class="nav-link active" aria-current="page" href="/map">Map</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Manage</a>
+                    <a class="nav-link" href="/manage">Manage</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Trip</a>

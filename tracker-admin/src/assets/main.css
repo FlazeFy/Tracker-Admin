@@ -37,3 +37,6 @@ a,
 .gm-control-active span {
   background: white !important;
 }
+table tr, table th {
+  vertical-align: center !important;
+}
