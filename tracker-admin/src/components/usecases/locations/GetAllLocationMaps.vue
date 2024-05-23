@@ -10,7 +10,7 @@
                 style="width: 100%; height: 91vh"
                 :center="center"
                 :zoom="15"
-                @click="alert('asd')"
+                @click="handleMapClick"
             >
             <Marker
                 v-for="(location, index) in locations"
@@ -43,6 +43,10 @@
                 <GetTotalLocationByCategory></GetTotalLocationByCategory>
                 <GetTotalLocationByApps></GetTotalLocationByApps>
             </div>
+            <div class="position-absolute" style="bottom: var(--spaceXXSM); right: calc(var(--spaceXLG)*2.5);">
+                <button type="button" class="btn container text-white" data-bs-toggle="modal" data-bs-target="#addLocationModal">Add Location</button>
+                <PostLocation></PostLocation>
+            </div>
         </div>
     
         <div v-else class="text-center" style="padding-top: 40vh; height: 100vh;">
@@ -54,6 +58,7 @@
 <script setup>
     import GetTotalLocationByCategory from '@/components/usecases/locations/GetTotalLocationByCategory.vue'
     import GetTotalLocationByApps from '@/components/usecases/locations/GetTotalLocationByApps.vue'
+    import PostLocation from '@/components/usecases/locations/PostLocation.vue'
 
     import { GoogleMap, InfoWindow, Marker } from 'vue3-google-map'
     import axios from 'axios'
@@ -72,5 +77,19 @@
             error.value = err
         }
     })
+
+    const handleMapClick = (event) => {
+        const latLng = event.latLng
+        const lat = latLng.lat()
+        const lng = latLng.lng()
+
+        let modal = new bootstrap.Modal(document.getElementById('addLocationModal'), {
+            keyboard: false
+        });
+        document.getElementById('location_lat').value = lat
+        document.getElementById('location_long').value = lng
+
+        modal.show()
+    };
 </script>
   
