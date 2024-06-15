@@ -38,6 +38,16 @@ a,
   background: white !important;
 }
 table tr, table th {
-  vertical-align: center !important;
+  vertical-align: middle !important;
   text-align: center;
+}
+
+.apexcharts-legend-text {
+  color: var(--whiteColor) !important;
+}
+p, label, a, b, h1, h2, h3, h4, h5, h6, span, .form-select {
+  color: var(--whiteColor);
+}
+select {
+  background: var(--blackColor) !important;
 }

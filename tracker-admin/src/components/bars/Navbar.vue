@@ -51,8 +51,11 @@
                             <li><a class="dropdown-item" href="#">Checkout</a></li>
                             <li><a class="dropdown-item" href="#">GudangKu</a></li>
                             <li><a class="dropdown-item" href="#">PinMarker</a></li>
+                            <li><a class="dropdown-item" href="#">MyRide</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">MI-FIK</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sensor</a></li>
                         </ul>
                     </div>
                 </li>
